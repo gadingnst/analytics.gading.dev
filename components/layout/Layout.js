@@ -10,7 +10,7 @@ export default function Layout({ title, children, header = true, footer = true }
   return (
     <>
       <Head>
-        <title>umami{title && ` - ${title}`}</title>
+        <title>Gading&apos;s Analytics{title && ` - ${title}`}</title>
       </Head>
 
       {header && <Header />}
