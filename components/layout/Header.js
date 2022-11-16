@@ -18,7 +18,7 @@ export default function Header() {
   const { pathname } = useRouter();
   const { updatesDisabled } = useConfig();
   const isSharePage = pathname.includes('/share/');
-  const allowUpdate = user?.is_admin && !updatesDisabled && !isSharePage;
+  const allowUpdate = user?.isAdmin && !updatesDisabled && !isSharePage;
 
   return (
     <>
@@ -39,9 +39,11 @@ export default function Header() {
             <Link href="/realtime">
               <FormattedMessage id="label.realtime" defaultMessage="Realtime" />
             </Link>
-            <Link href="/settings">
-              <FormattedMessage id="label.settings" defaultMessage="Settings" />
-            </Link>
+            {!process.env.isCloudMode && (
+              <Link href="/settings">
+                <FormattedMessage id="label.settings" defaultMessage="Settings" />
+              </Link>
+            )}
           </div>
         )}
         <div className={styles.buttons}>
