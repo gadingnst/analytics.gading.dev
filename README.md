@@ -71,17 +71,17 @@ or change the [port](https://nextjs.org/docs/api-reference/cli#production) to se
 To build the umami container and start up a Postgres database, run:
 
 ```bash
-docker-compose up
+docker compose up
 ```
 
 Alternatively, to pull just the Umami Docker image with PostgreSQL support:
 ```bash
-docker pull docker.umami.dev/umami-software/umami:postgresql-latest
+docker pull docker.umami.is/umami-software/umami:postgresql-latest
 ```
 
 Or with MySQL support:
 ```bash
-docker pull docker.umami.dev/umami-software/umami:mysql-latest
+docker pull docker.umami.is/umami-software/umami:mysql-latest
 ```
 
 ## Getting updates
@@ -92,14 +92,13 @@ To get the latest features, simply do a pull, install any new dependencies, and 
 git pull
 yarn install
 yarn build
-yarn update-db
 ```
 
 To update the Docker image, simply pull the new images and rebuild:
 
 ```bash
-docker-compose pull
-docker-compose up --force-recreate
+docker compose pull
+docker compose up --force-recreate
 ```
 
 ## License
