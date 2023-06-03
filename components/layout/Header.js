@@ -11,11 +11,11 @@ export function Header() {
     <header className={styles.header}>
       <Row>
         <Column>
-          <Link href="https://umami.is" target="_blank" className={styles.title}>
+          <Link href="https://analytics.gading.dev" target="_blank" className={styles.title}>
             <Icon size="lg">
               <Icons.Logo />
             </Icon>
-            <Text>umami</Text>
+            <Text>Gading&apos;s Analytics</Text>
           </Link>
         </Column>
         <Column className={styles.buttons}>

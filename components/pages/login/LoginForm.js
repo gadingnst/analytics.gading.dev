@@ -39,7 +39,7 @@ export function LoginForm() {
       <Icon className={styles.icon} size="xl">
         <Logo />
       </Icon>
-      <div className={styles.title}>umami</div>
+      <div className={styles.title}>Gading&apos;s Analytics</div>
       <Form className={styles.form} onSubmit={handleSubmit} error={getMessage(error)}>
         <FormRow label={formatMessage(labels.username)}>
           <FormInput name="username" rules={{ required: formatMessage(labels.required) }}>
